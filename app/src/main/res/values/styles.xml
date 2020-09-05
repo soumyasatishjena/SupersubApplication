@@ -1,0 +1,56 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/lightGreen</item>
+        <item name="colorPrimaryDark">@color/lightGreen</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Fullscreen">
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="CardViewMore" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/fifty_dp</item>
+        <item name="android:layout_marginTop">@dimen/eight_dp</item>
+        <item name="android:layout_marginBottom">@dimen/five_dp</item>
+        <item name="android:layout_marginStart">@dimen/twenty_five_dp</item>
+        <item name="android:layout_marginEnd">@dimen/twenty_five_dp</item>
+        <item name="android:paddingStart">@dimen/five_dp</item>
+        <item name="android:paddingEnd">@dimen/five_dp</item>
+        <item name="cardCornerRadius">@dimen/five_dp</item>
+        <item name="cardElevation">@dimen/five_dp</item>
+    </style>
+
+
+    <style name="ImageMoreGo">
+        <item name="android:layout_width">@dimen/thirty_dp</item>
+        <item name="android:layout_height">@dimen/thirty_dp</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/ic_arrow_go</item>
+        <item name="android:layout_marginEnd">@dimen/fifteen_dp</item>
+    </style>
+
+    <style name="TextMoreDisplay">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginStart">@dimen/fifteen_dp</item>
+        <item name="android:padding">@dimen/five_dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/blackColour</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">@dimen/text_eighteen_sp</item>
+    </style>
+
+</resources>

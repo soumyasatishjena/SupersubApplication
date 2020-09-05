@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Supersub Application</string>
+    <string name="serverError">Server Error !! \n Please try after some time..</string>
+    <string name="fetchingMessage">Loading Data .....</string>
+    <string name="internetError">"No Internet Available !!! \n Please check your connection."</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+</resources>

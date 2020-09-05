@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    dataBinding{
+        enabled = true
+    }
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.example.supersubapplication"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext{
+    material = '1.2.1'
+    retrofit = '2.6.2'
+    gson = '2.8.5'
+    gsonCoverter = '2.6.2'
+    rxJavaAdapter = '2.6.0'
+    retrofitRxJavaConverter = '1.0.0'
+    rxJava = '2.2.9'
+    rxAndroid = '2.1.1'
+    androidX = '1.0.0'
+    glide = '4.11.0'
+    lifecycle_version = "1.1.1"
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // material design
+    implementation "com.google.android.material:material:$material"
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    //Gson Converter
+    implementation "com.google.code.gson:gson:$gson"
+    implementation "com.squareup.retrofit2:converter-gson:$gsonCoverter"
+    // rx java adapter
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxJavaAdapter"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$retrofitRxJavaConverter"
+    // rx java
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJava"
+    // android x
+    implementation "androidx.legacy:legacy-support-v4:$androidX"
+    // mvvm
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glide"
+}
